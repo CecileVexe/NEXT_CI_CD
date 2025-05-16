@@ -44,8 +44,7 @@ jobs:
     needs:
         - test
     steps:
-      - run: mkdir -p path/to/artifact
-      - run: echo hello > /home/runner/work/NEXT_CI_CD/NEXT_CI_CD/cypress/videos/app.cy.ts.mp4
+      - run: echo hello > /home/runner/work/NEXT_CI_CD/NEXT_CI_CD/cypress/videos
       - uses: actions/upload-artifact@v4
         with:
           name: cypress-video
