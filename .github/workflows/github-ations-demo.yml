@@ -42,8 +42,9 @@ jobs:
       #- run: npm run e2e:headless
       - uses: cypress-io/github-action@v6
         with: 
+          install: false
           start: npm run dev
-          brower: ${{matrix.browser}}
+          browser: ${{matrix.browser}}
       - run : echo "🚀 Étapes de test terminées"
       - uses: actions/upload-artifact@v4
         if: always()
