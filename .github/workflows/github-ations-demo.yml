@@ -41,7 +41,9 @@ jobs:
       - run: echo "🚀 Le code du dépôt a été cloné sur le serveur d'exécution."
       #- run: npm run e2e:headless
       - uses: cypress-io/github-action@v6
-        with: ${{matrix.browser}}
+        with: 
+          start: npm run dev
+          brower: ${{matrix.browser}}
       - run : echo "🚀 Étapes de test terminées"
       - uses: actions/upload-artifact@v4
         if: always()
