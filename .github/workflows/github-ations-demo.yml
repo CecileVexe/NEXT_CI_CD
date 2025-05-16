@@ -47,6 +47,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
-        name: cypress-screenshots
-        path: cypress/screenshots/
-        retention-day: 5
+          name: cypress-screenshots
+          path: cypress/screenshots/
+          retention-day: 5
