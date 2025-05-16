@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        browser: [chrome, edge, firefox]
+        browser: [chrome, edge]
     needs:
         - build
     steps:
