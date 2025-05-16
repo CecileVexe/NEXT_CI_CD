@@ -15,6 +15,6 @@ describe("Navigation", () => {
     cy.url().should("include", "/home/about");
 
     // The new page should contain an h1 with "About"
-    cy.get("h1").contains("Error test failed on purpose");
+    cy.get("h1").contains("About");
   });
 });
