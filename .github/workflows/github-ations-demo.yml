@@ -108,7 +108,7 @@ jobs:
         cd "$REPO_DIR/NEXT_CI_CD"
         npm install
 
-        cd ~/github-aws-ec2/NEXT_CI_CD
+        cd "$REPO_DIR/NEXT_CI_CD"
         git pull origin main
         npm install
         npm run build
