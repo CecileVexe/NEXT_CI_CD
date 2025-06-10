@@ -111,5 +111,5 @@ jobs:
         npm run build
 
         echo "Starting/restarting application..."
-        pm2 restart NEXT_CI_CD || pm2 start NEXT_CI_CD -- run start
+        pm2 restart NEXT_CI_CD || pm2 start npm --name NEXT_CI_CD -- run start
         '
