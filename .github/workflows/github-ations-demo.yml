@@ -95,7 +95,7 @@ jobs:
 
         REPO_URL="https://github.com/CecileVexe/NEXT_CI_CD"
         BRANCH="main"
-        REPO_DIR="$HOME/github-aws-ec2"
+        REPO_DIR="$HOME"
 
         if [ -d "$REPO_DIR/.git" ]; then
           cd "$REPO_DIR"
