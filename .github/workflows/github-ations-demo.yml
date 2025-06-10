@@ -106,9 +106,6 @@ jobs:
         fi
 
         cd "$REPO_DIR/NEXT_CI_CD"
-        npm install
-
-        cd "$REPO_DIR/NEXT_CI_CD"
         git pull origin main
         npm install
         npm run build
