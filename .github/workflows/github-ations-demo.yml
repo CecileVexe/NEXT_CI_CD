@@ -117,7 +117,7 @@ jobs:
   
   build-push-docker :
     runs-on: ubuntu-latest
-    persmissions:
+    permissions:
     contents: read
     packages: write
 
