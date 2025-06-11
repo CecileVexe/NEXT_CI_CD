@@ -1,9 +1,8 @@
 services :
   next :
-    build: .
-    #Si on détail
-    #context: .
-    #dockerfile: Dockerfile 
+    build:
+      context: .
+      target: next-ci-cd # nom de l'image dans le Dockerfile
     ports: 
      - "3000:3000"
     environment :
