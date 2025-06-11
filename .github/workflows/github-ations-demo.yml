@@ -185,8 +185,8 @@ jobs:
           script: |
             mkdir test -p
             cd test
-            sudo docker compose -f docker-compose.yml pull
-            sudo docker compose -f docker-compose.yml up -d
+            sudo docker compose -f docker-compose.test.yml pull
+            sudo docker compose -f docker-compose.test.yml up -d
 
 
 
