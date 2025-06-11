@@ -1,6 +1,6 @@
 services :
   next :
-    image: ghcr.io/cecilevexe/next_ci_cd/next-ci-cd
+    image: ghcr.io/cecilevexe/next_ci_cd/next-ci-cd:main
     restart: unless-stopped
     ports: 
      - "3000:3000"
