@@ -157,7 +157,7 @@ jobs:
 
   deploy-docker-on-prod:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == "main" }}
+    if: ${{ github.ref_name == 'main' }}
     needs:
       - build-push-docker
     steps:
@@ -173,7 +173,7 @@ jobs:
   
   deploy-docker-on-test:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == "test" }}
+    if: ${{ github.ref_name == 'test' }}
     needs:
       - build-push-docker
     steps:
