@@ -183,9 +183,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
-            if [ -d "$HOME/test" ]; then
-              mkdir test
-            fi
+            mkdir test -p
             cd test
             sudo docker compose -f docker-compose.yml pull
             sudo docker compose -f docker-compose.yml up -d
