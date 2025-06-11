@@ -158,6 +158,9 @@ jobs:
   deploy-docker-on-prod:
     runs-on: ubuntu-latest
     if: ${{ github.ref_name == 'main' }}
+    environment:
+      name: prod
+      url: http://ec2-23-22-102-8.compute-1.amazonaws.com/
     needs:
       - build-push-docker
     steps:
@@ -174,6 +177,9 @@ jobs:
   deploy-docker-on-test:
     runs-on: ubuntu-latest
     if: ${{ github.ref_name == 'test' }}
+    environment:
+      name: test
+      url: http://ec2-23-22-102-8.compute-1.amazonaws.com/
     needs:
       - build-push-docker
     steps:
