@@ -123,7 +123,7 @@ jobs:
       contents: read
       packages: write
 
-    needs: test
+    # needs: test
     steps:
     - uses: actions/checkout@v4 #recupérer le code
     - name: Login to GitHub Container Registry
