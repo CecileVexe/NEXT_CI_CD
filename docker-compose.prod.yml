@@ -1,0 +1,9 @@
+services :
+  next :
+    image: ghcr.io/cecilevexe/next_ci_cd/next-ci-cd
+    restart: unless-stopped
+    ports: 
+     - "3000:3000"
+    environment :
+      - DOCKER_ENV=prod
+   

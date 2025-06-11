@@ -1,0 +1,15 @@
+services :
+  next :
+    build: .
+    #Si on détail
+    #context: .
+    #dockerfile: Dockerfile 
+    ports: 
+     - "3000:3000"
+    environment :
+      - DOCKER_ENV=dev
+    command: ["npm" , "run" , "dev"]
+    volumes : 
+      - .:/app
+      #Lie tout ce qu'il y a dans le dossier racine du docker-compose avec le workDir app 
+      #définie dans le DockerFile, permet d'avoir le site qui se rebuild à chaque changement de code

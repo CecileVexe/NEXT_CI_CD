@@ -14,6 +14,14 @@ WORKDIR /app
 RUN npm install
 RUN npm run build
 
+#Pour le watch en dev
+COPY next.config.mjs ./next.config.mjs
+
 EXPOSE 3000
 
-CMD npm run start
+COPY docker/next/entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
+
+ENTRYPOINT ["entrypoint"]
+
+CMD ["npm", "run", "start"]
