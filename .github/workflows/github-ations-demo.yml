@@ -157,10 +157,10 @@ jobs:
 
   deploy-docker-on-prod:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'main' }}
-    environment:
-      name: prod
-      url: http://ec2-23-22-102-8.compute-1.amazonaws.com/
+    # if: ${{ github.ref_name == 'main' }}
+    # environment:
+    #   name: prod
+    #   url: http://ec2-23-22-102-8.compute-1.amazonaws.com/
     needs:
       - build-push-docker
     steps:

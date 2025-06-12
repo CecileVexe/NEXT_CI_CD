@@ -2,8 +2,19 @@ services :
   next :
     image: ghcr.io/cecilevexe/next_ci_cd/next-ci-cd:main
     restart: unless-stopped
-    ports: 
-     - "3000:3000"
+    # ports: 
+    #  - "3000:3000"
     environment :
       - DOCKER_ENV=prod
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.next-prod.rule=Host(`ec2-13-38-214-84.eu-west-3.compute.amazonaws.com`)"
+      - "traefik.http.routers.next-prod.entrypoints=web"
+    networks:
+      - web
+
+networks:
+  web:
+    name: web
+    external: true
    

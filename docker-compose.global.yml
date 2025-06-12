@@ -1,0 +1,24 @@
+services:
+
+#reverse proxy
+  traefik:
+    image: "traefik:v3.4"
+    container_name: "traefik"
+    command:
+      - "--log.level=DEBUG" #pour les logs complet
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.web.address=:80" #écoute sur le port 80
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - web
+
+#network pour les autres docker compose
+networks:
+  web:
+    name: web
